@@ -1,0 +1,15 @@
+name = "douches-photos"
+main = "src/index.js"
+compatibility_date = "2025-09-01"
+
+# Domaine autorisé à envoyer des photos (URL Netlify). "*" pour commencer.
+[vars]
+ALLOWED_ORIGIN = "*"
+
+[[r2_buckets]]
+binding = "PHOTOS"
+bucket_name = "douches-photos"
+
+# Secrets à créer :
+#   wrangler secret put APP_TOKEN
+# Facultatif : PUBLIC_BASE_URL si vous branchez un domaine sur le Worker.
